@@ -1,56 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-.dark-background {
-    background-color: #0b0b0b;
+body {
+  background-color: rgb(235, 235, 235);
+  font-family: "Roboto";
 }
 
-.bulb-image {
-    width: 150px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.cat-image {
-    width: 300px;
+.mainHeading {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
 }
 
-.switch-board {
-    background-color: #7b8794;
-    width: 294px;
-    height: 139px;
-    border-radius: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin: 16px;
+.tap {
+  display: flex;
+  justify-content: center;
+  min-width: 60%;
 }
 
-.switch-status {
-    color: #ffffff;
-    font-family: "Roboto";
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 24px;
+.tapButton {
+  width: 33%;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-.on-switch {
-    color: #ffffff;
-    background-color: #cbd2d9;
-    font-family: "Roboto";
-    font-size: 24px;
-    font-weight: bold;
-    width: 99px;
-    height: 44px;
-    border-radius: 8px;
-    margin-left: 16px;
+.tapButton:focus {
+  background: rgb(10, 16, 19);
+  color: lightblue;
 }
 
-.off-switch {
-    color: #ffffff;
-    background-color: #e12d39;
-    font-family: "Roboto";
-    font-size: 24px;
-    font-weight: bold;
-    width: 99px;
-    height: 44px;
-    border-radius: 8px;
+.product-card {
+  display: flex;
+  width: 250px;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 80px;
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b0;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+p {
+  width: 100px;
+}
+
+.image {
+  height: 300px;
+  width: 250px;
+  border-radius: 30px;
+}
+
+.title {
+  font-family: "Lobster";
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(1, 1, 1);
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80px;
+}
+
+.compare {
+  color: #8a7f7a;
+  font-size: 18px;
+  text-decoration: line-through;
+  width: 80px;
+}
+
+.discount {
+  color: orange;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80px;
+}
+
+@media (max-width: 767px) {
+  .mainHeading {
+    font-size: 15px;
+  }
+
+  .product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
